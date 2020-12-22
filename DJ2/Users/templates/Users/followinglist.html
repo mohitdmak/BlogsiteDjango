@@ -1,0 +1,17 @@
+{% extends "Blog/base.html" %}
+
+{% block 1 %}
+    <h1>Following . . .</h1>
+    {% for fl in flist %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ fl.usr.profile.image.url }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="{% url 'SEEPROFILE' fl.usr.id %}">{{ fl.usr.username }}</a>
+                    <a class="btn btn-outline-danger" href="{% url 'UNFOLLOW' fl.usr.id %}">Unfollow</a>
+                </div>
+                
+            </div>
+        </article>
+    {% endfor %}
+{% endblock 1%}

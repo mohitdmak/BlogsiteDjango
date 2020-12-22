@@ -1,0 +1,25 @@
+{% extends "Blog/base.html" %}
+
+{% block 1 %}
+    <div class="content-section">
+        <div class="media">
+        
+            <img class="rounded-circle account-img" src={{ usr.profile.image.url }}>
+            <div class="media-body">
+                <h2 class="account-heading">{{ usr.username }}</h2>
+                <p class="text-secondary">{{ usr.email }}</p>
+            </div>
+            {% if user.is_authenticated %}
+                {% if fl3 %}
+                {% endif %}
+                {% if fl1 %}
+                    <a class="btn btn-outline-danger" href="{% url 'UNFOLLOW' usr.id %}">Unfollow</a>
+                {% endif %}
+                {% if fl2 %}
+                    <a button class="btn btn-outline-info" href="{% url 'FOLLOW' usr.id %}">Follow</a>
+                {% endif %}
+            {% endif %}
+        </div>
+        
+    </div>
+{% endblock 1 %}

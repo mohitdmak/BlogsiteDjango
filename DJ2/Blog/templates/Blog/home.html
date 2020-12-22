@@ -1,0 +1,19 @@
+{% extends 'Blog/base.html' %}
+{% block 1 %}
+  {% for posts in post %}
+    <article class="media content-section">
+      <img class="rounded-circle article-img" src="{{ posts.author.profile.image.url }}">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="{% url 'SEEPROFILE' posts.author.id %}">{{ posts.author }}</a>
+          <small class="text-muted">{{ posts.time }}</small>
+        </div>
+        <h2><a class="article-title" href="{% url 'post_detail' posts.id %}">{{ posts.title }}</a></h2>
+        <p class="article-content">{{ posts.content }}</p>
+      </div>
+    </article>
+  {% endfor %}
+  
+
+{% endblock 1 %}
+
