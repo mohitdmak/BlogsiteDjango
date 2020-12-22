@@ -1,0 +1,18 @@
+{% extends "Blog/base.html" %}
+
+{% block 1 %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">ARE YOU SURE YOU WANT TO DELETE YOUR POST ?</legend>
+                
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Yes</button>
+                <a class="btn btn-outline-secondary" href="{% url 'post_detail' object.id %}">No, take me back</a>
+            </div>
+        </form>
+        
+    </div>
+{% endblock 1 %}
