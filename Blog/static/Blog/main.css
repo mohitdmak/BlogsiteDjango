@@ -1,0 +1,84 @@
+body {
+    background: #cea5c1;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #b4362d;
+  }
+  
+  ul {
+    margin: 5;
+  }
+  
+  .bg-steel {
+    background-color: #2e2f3b;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #af4e3c;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #636abd;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #f1fceb;
+    padding: 10px 20px;
+    border: 2px solid #4b0303;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    color: #754925;
+  }
+  
+  a.article-title:hover {
+    color: #963d8e;
+    text-decoration: khaki;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 4px;
+    margin-bottom: 1px;
+    border-bottom: 3px solid #3b273b
+  }
+  
+  .article-metadata a:hover {
+    color: rgb(92, 34, 87);
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
