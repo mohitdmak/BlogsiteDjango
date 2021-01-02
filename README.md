@@ -1,5 +1,3 @@
-# BlogsiteDjango
-First implementation of django framework.
+First Implementation of Django Framework
 
-Not accepting contributions currently,
-email to propose a collaboration.
+To Contribute, read CONTRIBUTING.md, and checkout official Django documentation.
