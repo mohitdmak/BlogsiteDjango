@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 class Post(models.Model):
-    db_name='postsdatabase'
     title = models.CharField(max_length=100)
     content = models.TextField()
     time = models.DateTimeField(default=timezone.now)

@@ -6,7 +6,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
 from django.contrib.auth.models import User
 from Users.models import FollowList
-from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -69,12 +68,3 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request,"Blog/about.html")
-
-@login_required
-def star(request,**kwargs):
-    posttofollow= Post.objects.filter(id= kwargs['pk'])[0]
-    request.user.Starred.create(whichpost=posttofollow)
-    messages.success(request, "You have added the Post to your favourites")
-    return redirect('blog-home')
-
-
