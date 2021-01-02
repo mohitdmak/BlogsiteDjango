@@ -13,8 +13,4 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post_detail',kwargs={'pk':self.pk})
     
-
-class Starred(models.Model):
-    byuser= models.ForeignKey(User, on_delete=models.CASCADE)
-    whichpost=models.ForeignKey(Post, on_delete=models.CASCADE)
     
