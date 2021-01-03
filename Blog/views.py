@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import Post
+from .models import Post,Starred
 from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 from Users.models import FollowList
@@ -64,6 +65,16 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
             return True
         else:
             return False
+
+@login_required
+def SavePost(request,**kwargs):
+    posttosave=Post.objects.filter(id=kwargs['pk'])[0]
+    request.user.savepost.create(tosave=posttosave)
+    messages.success(request,"The Post is bookmarked")
+    return redirect('blog-home')
+
+def showbookmarks(request):
+    return render(request,"Blog/showbookmarks.html",{'savedposts':request.user.savepost.all()})
     
 
 def about(request):

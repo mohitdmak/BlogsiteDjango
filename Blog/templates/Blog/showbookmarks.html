@@ -1,0 +1,18 @@
+{% extends "Blog/base.html" %}
+
+{% block 1 %}
+    <h1>Bookmarks. . .</h1>
+    {% for posts in savedposts %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ posts.tosave.author.profile.image.url }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="{% url 'SEEPROFILE' posts.tosave.id %}">{{ posts.tosave.author }}</a>
+                    <small class="text-muted">{{ posts.tosave.time }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'post_detail' posts.tosave.id %}">{{ posts.title }}</a></h2>
+                <p class="article-content">{{ posts.tosave.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock 1%}
