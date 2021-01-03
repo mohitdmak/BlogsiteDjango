@@ -12,5 +12,12 @@ class Post(models.Model):
         return str(self.title)
     def get_absolute_url(self):
         return reverse('post_detail',kwargs={'pk':self.pk})
+
+class Starred(models.Model):
+    tosave=models.ForeignKey(Post,on_delete=models.CASCADE)
+    saved=models.ManyToManyField(User,related_name='savepost')
+    def save(self,*args,**kwargs):
+        super().save(*args,**kwargs)
+
     
     
