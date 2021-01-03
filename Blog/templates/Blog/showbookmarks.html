@@ -7,10 +7,10 @@
             <img class="rounded-circle article-img" src="{{ posts.tosave.author.profile.image.url }}">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="{% url 'SEEPROFILE' posts.tosave.id %}">{{ posts.tosave.author }}</a>
+                    <a class="mr-2" href="{% url 'SEEPROFILE' posts.tosave.author.id %}">{{ posts.tosave.author }}</a>
                     <small class="text-muted">{{ posts.tosave.time }}</small>
                 </div>
-                <h2><a class="article-title" href="{% url 'post_detail' posts.tosave.id %}">{{ posts.title }}</a></h2>
+                <h2><a class="article-title" href="{% url 'post_detail' posts.tosave.id %}">{{ posts.tosave.title }}</a></h2>
                 <p class="article-content">{{ posts.tosave.content }}</p>
             </div>
         </article>
