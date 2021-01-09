@@ -1,5 +1,5 @@
 body {
-    background: #cea5c1;
+    background: white;
     color: #333333;
     margin-top: 5rem;
   }
@@ -29,7 +29,7 @@ body {
   }
   
   .content-section {
-    background: #f1fceb;
+    background: #919175;
     padding: 10px 20px;
     border: 2px solid #4b0303;
     border-radius: 3px;
@@ -41,8 +41,8 @@ body {
   }
   
   a.article-title:hover {
-    color: #963d8e;
-    text-decoration: khaki;
+    color: Bla;
+    text-emphasis-color: Black;
   }
   
   .article-content {
@@ -58,7 +58,7 @@ body {
   .article-metadata {
     padding-bottom: 4px;
     margin-bottom: 1px;
-    border-bottom: 3px solid #3b273b
+    border-bottom: 3px solid #3b273b;
   }
   
   .article-metadata a:hover {
