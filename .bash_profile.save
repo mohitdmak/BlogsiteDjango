@@ -1,0 +1,2 @@
+#MYSQL PATH
+export PATH=$PATH:/pip install mysqlclient
